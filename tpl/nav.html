@@ -1,0 +1,206 @@
+<div id="sidebar-wrap">
+  <uib-accordion close-others="oneAtTime">
+
+    <uib-accordion-group is-open="status.isFirstOpen">
+
+      <uib-accordion-heading>
+        Navigation
+        <i class="pull-right " ng-class="{'fa fa-angle-up': status.isFirstOpen, 'fa fa-angle-down': !status.isFirstOpen}">
+        </i>
+      </uib-accordion-heading>
+
+<!--      <ul id="navigation" nav-collapse ripple ng-if="!settings.std_terminate">-->
+      <ul id="navigation" nav-collapse ripple>
+
+        <li ui-sref-active="active">
+          <a ui-sref="dashboard">
+            <i class="fa fa-home"></i>
+             <span>HOME</span>
+          </a>
+        </li>
+
+        <!-- ลงทะเบียนรายวิชา -->
+        <li ng-if="!settings.isStudentDocumentOffLimit && !settings.std_blacklist_show"
+            ui-sref-active="active" >
+          <a href="javascript:">
+            <i class="icon-puzzle"></i>
+            <span>ลงทะเบียนรายวิชา</span>
+          </a>
+          <ul>
+            <li>
+              <a ui-sref="regis_bachregist" ng-hide="settings.is_online || settings.std_register_blacklist_show"
+                 >
+                <i class="fa fa-angle-double-right font-red"></i> ลงทะเบียนรายวิชา </a>
+            </li>
+            <li>
+              <a ng-hide="settings.is_online || settings.std_register_blacklist_show"
+                 ui-sref="finan_bach_registconfirm">
+                <i class="fa fa-angle-double-right font-red"></i> ยืนยันการลงทะเบียน </a>
+            </li>
+            <li>
+              <a ng-hide="settings.is_online" ui-sref="finan_batch_regisbillpayment_reprint">
+                <i class="fa fa-angle-double-right font-red"></i> พิมพ์ใบแจ้งการชำระเงินใหม่ </a>
+            </li>
+            <li>
+              <a ng-show="settings.is_online" ui-sref="finan_bach_billpayment_monthly">
+                <i class="fa fa-angle-double-right font-red"></i> พิมพ์ใบแจ้งการชำระเงินใหม่ </a>
+            </li>
+            <li>
+              <a ng-hide="settings.is_online" ui-sref="finan_billpayment_stdacct_remain">
+                <i class="fa fa-angle-double-right font-red"></i> พิมพ์ใบแจ้งการชำระเงิน (งวดค้างชำระ) </a>
+            </li>
+            <!--<li>
+              <a ng-show="settings.hasManualBillRegister" ui-sref="finan_manual_bill_register">
+                <i class="fa fa-angle-double-right font-red"></i> ใบแจ้งชำระค่าลงทะเบียน ภาค 1/2563 </a>
+            </li>-->
+          </ul>
+        </li>
+        <!-- ใบแจ้งชำระเงินค่าธรรมเนียม -->
+        <li ng-if="!settings.isStudentDocumentOffLimit && !settings.std_blacklist_show">
+          <a href="javascript:">
+            <i class="fa fa-file-text-o"></i>
+            <span class="title">ใบแจ้งชำระเงินค่าธรรมเนียม</span>
+            <span class="arrow"></span>
+          </a>
+          <ul>
+            <li>
+              <a ui-sref="finan_bill_payment_fee"><i
+                  class="fa fa-angle-double-right font-red"></i> ค่าธรรมเนียมต่างๆ </a>
+            </li>
+            <li>
+              <a ui-sref="finan_bill_payment_fee_graduate"><i
+                  class="fa fa-angle-double-right font-red"></i> ค่าธรรมเนียมขอจบการศึกษา </a>
+            </li>
+            <li>
+              <a ui-sref="finan_fee_graduate_ceremony"><i
+                  class="fa fa-angle-double-right font-red"></i> ค่าเข้าร่วมพิธีประสาทปริญญาบัตร </a>
+            </li>
+            <li>
+              <a ui-sref="finan_order_student_uniform"><i
+                  class="fa fa-angle-double-right font-red"></i> สั่งจองเครื่องแต่งกายนิสิต </a>
+            </li>
+            <li>
+              <!--<a ui-sref="regis_examfile_gradef" ng-show="settings.is_online" ><i class="fa fa-angle-double-right font-purple"></i> รายวิชาที่ขาดสอบ </a>-->
+              <a ng-if="settings.datSM_STDFILE.stdstatus_id === 'S'" ui-sref="regis_examfile_gradef"><i
+                      class="fa fa-angle-double-right font-red"></i> รายวิชาที่ขาดสอบ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" ui-sref="finan_QrPaymentOwe"><i
+                class="fa fa-angle-double-right font-red"></i> ชำระค่าเทียบโอน </a>
+            </li>
+          </ul>
+        </li>
+        <!-- ประเมินการเรียนการสอน -->
+        <li ng-if="!settings.isStudentDocumentOffLimit && !settings.is_online">
+          <a ui-sref="regis_student_class_review">
+            <i class="fa fa-check-square"></i>
+            <span>ประเมินการเรียนการสอน</span>
+          </a>
+        </li>
+        <!-- หอพัก -->
+        <li ng-if="!settings.isStudentDocumentOffLimit">
+          <a href="javascript:">
+            <i class="fa fa-building-o"></i>
+            <span>หอพัก</span>
+
+          </a>
+          <ul>
+            <li>
+              <a ui-sref="finan_bill_electric">
+                <i class="fa fa-angle-double-right font-red"></i>ค่าหอพัก-ค่านำ้-ค่าไฟฟ้า
+              </a>
+            </li>
+          </ul>
+        </li>
+        <!-- เอกสารสำคัญ -->
+        <li ng-show="(settings.ExternalTransferWorkFlow || settings.StudentDocumentWorkFlow) && !settings.std_blacklist_show">
+          <a href="javascript:">
+            <i class="fa fa-folder-o"></i>
+            <span> เอกสารสำคัญ</span>
+          </a>
+          <ul>
+
+            <li ng-show="settings.ExternalTransferWorkFlow">
+              <a ui-sref="docum_externaltransferupload">
+                <i class="fa fa-angle-double-right font-red"></i> เอกสารเทียบโอน
+              </a>
+            </li>
+            <li ng-show="settings.StudentDocumentWorkFlow">
+              <a ui-sref="docum_studentdocumentupload">
+                <i class="fa fa-angle-double-right font-red"></i> เอกสารการสมัครเรียน
+              </a>
+            </li>
+            <!--<li>
+                <a ui-sref="docum_chooseStdCenter">
+                    <i class="fa fa-angle-double-right font-red"></i> เลือกสนามสอบ
+                </a>
+            </li>-->
+          </ul>
+        </li>
+        <!-- สอบถามข้อมูล -->
+        <li ng-if="!settings.isStudentDocumentOffLimit && !settings.std_blacklist_show">
+          <a href="javascript:">
+            <i class="icon-info"></i>
+            <span> สอบถามข้อมูล</span>
+
+          </a>
+          <ul>
+            <li>
+              <a href="{{linkReportTranscriptInformal+settings.userSignin_info.UserLogin}}"
+                 target="_blank">
+                <i class="fa fa-angle-double-right font-red"></i> ผลการเรียน
+              </a>
+            </li>
+            <li>
+              <a href="{{linkReportCoursePlanDetailGrade+settings.userSignin_info.UserLogin}}"
+                 target="_blank">
+                <i class="fa fa-angle-double-right font-red"></i> ข้อมูลแสดงผลแผนการเรียน
+              </a>
+            </li>
+          </ul>
+        </li>
+        <!-- ตรวจสอบการชำระเงิน -->
+        <li ng-if="!settings.isStudentDocumentOffLimit && !settings.std_blacklist_show">
+          <a ui-sref="finan_check_payment">
+            <i class="icon-wallet"></i>
+            <span>ตรวจสอบการชำระเงิน</span>
+          </a>
+
+        </li>
+
+        <li ui-sref-active="active" ng-repeat="module in tbModule"
+            ng-class="{'open':currentProgram.Module_Idx === module.Idx}">
+          <a href="javascript:;">
+            <i ng-class="module.Icon"></i>
+            <span ng-bind="module.ModuleName"> </span>
+          </a>
+          <ul>
+            <li ng-repeat="submodule in module.submodule"
+                ng-class="{'open':currentProgram.SubModule_Idx === submodule.Idx}">
+              <a href="javascript:;">
+                <span ng-bind="submodule.SubModuleName"> </span>
+              </a>
+              <ul>
+                <li ng-repeat="prog in submodule.program"
+                    ng-class="{'active':currentProgram.Idx === prog.Idx}">
+                  <a ui-sref="{{prog.Controller}}" ng-click="onMenuClick(prog)">
+                    <span ng-bind="prog.ProgramName"></span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </uib-accordion-group>
+
+  </uib-accordion>
+</div>
+
+<script type="text/javascript">
+  $(function(){
+    $('#sidebar-wrap').slimScroll({
+      height: '100%'
+    });
+  });
+</script>

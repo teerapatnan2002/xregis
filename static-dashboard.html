@@ -1,0 +1,1098 @@
+<!DOCTYPE html><!--
+Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.7
+Version: 4.7.1
+--><!--[if IE 8]> <html lang="en" class="ie8 no-js" > <![endif]--><!--[if IE 9]> <html lang="en" class="ie9 no-js" > <![endif]--><!--[if !IE]><!--><html lang="en"   class="no-js notranslate " translate="no"><!--<![endif]--><!-- BEGIN HEAD --><head>
+    <title ></title>
+    <meta charset="utf-8">
+    <meta name="google" content="notranslate">
+    <meta http-equiv="Content-Language" content="th">
+    <meta http-equiv="content-Type" content="text/html; charset=window-874">
+    <meta http-equiv="content-Type" content="text/html; charset=tis-620">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="author">
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="css/css.css" rel="stylesheet" type="text/css">
+    <link href="css/wems.css" rel="stylesheet" type="text/css">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/simple-line-icons.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap-switch.min.css" rel="stylesheet" type="text/css">
+    <link href="css/sweetalert.css" rel="stylesheet" type="text/css">
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN DYMANICLY LOADED CSS FILES(all plugin and page related styles must be loaded between GLOBAL and THEME css files ) -->
+    <link id="ng_load_plugins_before">
+    <!-- END DYMANICLY LOADED CSS FILES -->
+    <!-- BEGIN THEME STYLES -->
+    <!-- DOC: To use 'rounded corners' style just load 'components-rounded.css' stylesheet instead of 'components.css' in the below style tag -->
+    <!--<link href="assets/global/css/components.min.css" id="style_components" rel="stylesheet" type="text/css" />
+    <link href="assets/global/css/plugins.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/layouts/layout/css/layout.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/layouts/layout/css/themes/grey.min.css" rel="stylesheet" type="text/css" id="style_color" />
+    <link href="assets/layouts/layout/css/custom.min.css" rel="stylesheet" type="text/css" />-->
+    <!-- END THEME STYLES -->
+
+    <link rel="stylesheet" href="css/kendo.common-bootstrap.min.css">
+    <link rel="stylesheet" href="css/kendo.bootstrap.min.css">
+    <link rel="stylesheet" href="css/kendo.bootstrap.mobile.min.css">
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!--    <link rel="stylesheet" href="node_modules/angular-bootstrap-nav-tree/dist/abn_tree.css" />-->
+    <!--    <link rel="stylesheet" href="node_modules/chosen/chosen.min.css" />-->
+    <!--    <link rel="stylesheet" href="node_modules/intro.js/introjs.css" />-->
+    <!--    <link rel="stylesheet" href="node_modules/leaflet/dist/leaflet.css" />-->
+    <!--    <link rel="stylesheet" href="node_modules/angular-loading-bar/build/loading-bar.css" />-->
+    <!--    <link rel="stylesheet" href="node_modules/angular-material/angular-material.css" />-->
+    <!--    <link rel="stylesheet" href="node_modules/rickshaw/rickshaw.min.css" />-->
+    <link rel="stylesheet" href="css/angular-toastr.min.css">
+    <!--    <link rel="stylesheet" href="node_modules/fullcalendar/fullcalendar.css" />-->
+    <!--    <link rel="stylesheet" href="node_modules/angular-ui-grid/ui-grid.css" />-->
+    <!--    <link rel="stylesheet" href="node_modules/angular-ui-select/dist/select.css" />-->
+    <!--    <link rel="stylesheet" href="node_modules/angular-ui-tree/dist/angular-ui-tree.min.css" />-->
+    <link rel="stylesheet" href="css/animate.css">
+    <!--    <link rel="stylesheet" href="node_modules/bootstrap-daterangepicker/daterangepicker.css" />-->
+    <!--    <link rel="stylesheet" href="node_modules/leaflet-draw/dist/leaflet.draw.css" />-->
+    <!--    <link rel="stylesheet" href="node_modules/material-design-iconic-font/dist/css/material-design-iconic-font.css" />-->
+    <!--    <link rel="stylesheet" href="node_modules/morrisjs/morris.css" />-->
+    <!--    <link rel="stylesheet" href="node_modules/ng-table/dist/ng-table.css" />-->
+    <!--    <link rel="stylesheet" href="node_modules/owl-carousel/owl-carousel/owl.theme.css" />-->
+    <!--    <link rel="stylesheet" href="node_modules/weather-icons/css/weather-icons.css" />-->
+    <!--    <link rel="stylesheet" href="node_modules/weather-icons/css/weather-icons.min.css" />-->
+    <!--    <link rel="stylesheet" href="node_modules/weather-icons/css/weather-icons-wind.css" />-->
+    <!--    <link rel="stylesheet" href="node_modules/weather-icons/css/weather-icons-wind.min.css" />-->
+    <!--    <link rel="stylesheet" href="node_modules/magnific-popup/dist/magnific-popup.css" />-->
+
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<!-- DOC: Apply "page-header-fixed-mobile" and "page-footer-fixed-mobile" class to body element to force fixed header or footer in mobile devices -->
+<!-- DOC: Apply "page-sidebar-closed" class to the body and "page-sidebar-menu-closed" class to the sidebar menu element to hide the sidebar by default -->
+<!-- DOC: Apply "page-sidebar-hide" class to the body to make the sidebar completely hidden on toggle -->
+<!-- DOC: Apply "page-sidebar-closed-hide-logo" class to the body element to make the logo hidden on sidebar toggle -->
+<!-- DOC: Apply "page-sidebar-hide" class to body element to completely hide the sidebar on sidebar toggle -->
+<!-- DOC: Apply "page-sidebar-fixed" class to have fixed sidebar -->
+<!-- DOC: Apply "page-footer-fixed" class to the body element to have fixed footer -->
+<!-- DOC: Apply "page-sidebar-reversed" class to put the sidebar on the right side -->
+<!-- DOC: Apply "page-full-width" class to the body element to have full width page without the sidebar menu -->
+
+<!--METRONIC-->
+<!--<body 
+      class="page-header-fixed page-sidebar-closed-hide-logo page-on-load"
+      >-->
+
+
+<!--MINOVATE-->
+<body id="minovate" class="Dummy Data Dummy Data  header-fixed aside-fixed rightbar-hidden appWrapper" >
+
+    <!-- Application content -->
+    <div id="wrap" autoscroll="false" style="visibility: visible !important;">
+
+        <!--HEADER-->
+        <section id="header" class="header-fixed">
+<header class="clearfix">
+
+  <!-- Branding -->
+  <div class="branding ">
+    <a class="brand" >
+      <strong><span class="text-lightred">X</span> REGIS</strong>
+    </a>
+    <a href="javascript:;" class="offcanvas-toggle visible-xs-inline" offcanvas-sidebar><i class="fa fa-bars"></i></a>
+  </div>
+  <!-- Branding end -->
+
+
+
+  <!-- Left-side navigation -->
+  <ul class="nav-left pull-left list-unstyled list-inline">
+    <li class="sidebar-collapse divided-right">
+      <a href="javascript:;" collapse-sidebar>
+        <!--        <fa name="outdent"></fa>-->
+        <i class="fa fa-outdent"></i>
+      </a>
+    </li>
+  </ul>
+  <!-- Left-side navigation end -->
+
+
+
+  <!-- Search -->
+  <!--<div class="search" id="main-search">
+    <input type="text" class="form-control underline-input" placeholder="Search...">
+  </div>-->
+  <!-- Search end -->
+
+
+  <!-- Right-side navigation -->
+  <ul class="nav-right pull-right list-inline">
+
+    <li class="dropdown nav-profile" uib-dropdown>
+
+      <a href class="dropdown-toggle" uib-dropdown-toggle>
+        <img src="https://xregis.nation.ac.th/stdphoto/6818010003" onerror="this.src='https://ui-avatars.com/api/?name=Chanathip+Pasuta&background=random'" alt="" class="img-circle size-30x30">
+        <span > </span><i class="fa fa-angle-down"></i>
+      </a>
+      <ul class="dropdown-menu animated littleFadeInRight" role="menu">
+        <li>
+          <a >
+            <i class="fa fa-lock"></i> เปลี่ยนรหัสผ่าน</a>
+        </li>
+        <li class="divider"></li>
+        <li>
+          <a >
+            <i class="fa fa-sign-out"></i> Log Out </a>
+        </li>
+      </ul>
+    </li>
+
+
+    <li class="toggle-right-sidebar">
+      <a >
+        <i class="fa fa-sign-out"></i>
+      </a>
+    </li>
+  </ul>
+  <!-- Right-side navigation end -->
+
+
+
+</header>
+
+</section>
+
+        <!--LEFT SIDE BAR-->
+        <div id="controls">
+            <aside id="sidebar" class="aside-fixed">
+<div id="sidebar-wrap">
+  <uib-accordion close-others="oneAtTime">
+
+    <uib-accordion-group is-open="status.isFirstOpen">
+
+      <uib-accordion-heading>
+        Navigation
+        <i class="pull-right " >
+        </i>
+      </uib-accordion-heading>
+
+<!--      <ul id="navigation" nav-collapse ripple >-->
+      <ul id="navigation" nav-collapse ripple>
+
+        <li >
+          <a >
+            <i class="fa fa-home"></i>
+             <span>HOME</span>
+          </a>
+        </li>
+
+        <!-- ลงทะเบียนรายวิชา -->
+        <li 
+             >
+          <a href="javascript:">
+            <i class="icon-puzzle"></i>
+            <span>ลงทะเบียนรายวิชา</span>
+          </a>
+          <ul>
+            <li>
+              <a  
+                 >
+                <i class="fa fa-angle-double-right font-red"></i> ลงทะเบียนรายวิชา </a>
+            </li>
+            <li>
+              <a 
+                 >
+                <i class="fa fa-angle-double-right font-red"></i> ยืนยันการลงทะเบียน </a>
+            </li>
+            <li>
+              <a  >
+                <i class="fa fa-angle-double-right font-red"></i> พิมพ์ใบแจ้งการชำระเงินใหม่ </a>
+            </li>
+            <li>
+              <a  >
+                <i class="fa fa-angle-double-right font-red"></i> พิมพ์ใบแจ้งการชำระเงินใหม่ </a>
+            </li>
+            <li>
+              <a  >
+                <i class="fa fa-angle-double-right font-red"></i> พิมพ์ใบแจ้งการชำระเงิน (งวดค้างชำระ) </a>
+            </li>
+            <!--<li>
+              <a  >
+                <i class="fa fa-angle-double-right font-red"></i> ใบแจ้งชำระค่าลงทะเบียน ภาค 1/2563 </a>
+            </li>-->
+          </ul>
+        </li>
+        <!-- ใบแจ้งชำระเงินค่าธรรมเนียม -->
+        <li >
+          <a href="javascript:">
+            <i class="fa fa-file-text-o"></i>
+            <span class="title">ใบแจ้งชำระเงินค่าธรรมเนียม</span>
+            <span class="arrow"></span>
+          </a>
+          <ul>
+            <li>
+              <a ><i
+                  class="fa fa-angle-double-right font-red"></i> ค่าธรรมเนียมต่างๆ </a>
+            </li>
+            <li>
+              <a ><i
+                  class="fa fa-angle-double-right font-red"></i> ค่าธรรมเนียมขอจบการศึกษา </a>
+            </li>
+            <li>
+              <a ><i
+                  class="fa fa-angle-double-right font-red"></i> ค่าเข้าร่วมพิธีประสาทปริญญาบัตร </a>
+            </li>
+            <li>
+              <a ><i
+                  class="fa fa-angle-double-right font-red"></i> สั่งจองเครื่องแต่งกายนิสิต </a>
+            </li>
+            <li>
+              <!--<a   ><i class="fa fa-angle-double-right font-purple"></i> รายวิชาที่ขาดสอบ </a>-->
+              <a  ><i
+                      class="fa fa-angle-double-right font-red"></i> รายวิชาที่ขาดสอบ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" ><i
+                class="fa fa-angle-double-right font-red"></i> ชำระค่าเทียบโอน </a>
+            </li>
+          </ul>
+        </li>
+        <!-- ประเมินการเรียนการสอน -->
+        <li >
+          <a >
+            <i class="fa fa-check-square"></i>
+            <span>ประเมินการเรียนการสอน</span>
+          </a>
+        </li>
+        <!-- หอพัก -->
+        <li >
+          <a href="javascript:">
+            <i class="fa fa-building-o"></i>
+            <span>หอพัก</span>
+
+          </a>
+          <ul>
+            <li>
+              <a >
+                <i class="fa fa-angle-double-right font-red"></i>ค่าหอพัก-ค่านำ้-ค่าไฟฟ้า
+              </a>
+            </li>
+          </ul>
+        </li>
+        <!-- เอกสารสำคัญ -->
+        <li >
+          <a href="javascript:">
+            <i class="fa fa-folder-o"></i>
+            <span> เอกสารสำคัญ</span>
+          </a>
+          <ul>
+
+            <li >
+              <a >
+                <i class="fa fa-angle-double-right font-red"></i> เอกสารเทียบโอน
+              </a>
+            </li>
+            <li >
+              <a >
+                <i class="fa fa-angle-double-right font-red"></i> เอกสารการสมัครเรียน
+              </a>
+            </li>
+            <!--<li>
+                <a >
+                    <i class="fa fa-angle-double-right font-red"></i> เลือกสนามสอบ
+                </a>
+            </li>-->
+          </ul>
+        </li>
+        <!-- สอบถามข้อมูล -->
+        <li >
+          <a href="javascript:">
+            <i class="icon-info"></i>
+            <span> สอบถามข้อมูล</span>
+
+          </a>
+          <ul>
+            <li>
+              <a href="#"
+                 target="_blank">
+                <i class="fa fa-angle-double-right font-red"></i> ผลการเรียน
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                 target="_blank">
+                <i class="fa fa-angle-double-right font-red"></i> ข้อมูลแสดงผลแผนการเรียน
+              </a>
+            </li>
+          </ul>
+        </li>
+        <!-- ตรวจสอบการชำระเงิน -->
+        <li >
+          <a >
+            <i class="icon-wallet"></i>
+            <span>ตรวจสอบการชำระเงิน</span>
+          </a>
+
+        </li>
+
+        <li  
+            >
+          <a href="javascript:;">
+            <i ></i>
+            <span > </span>
+          </a>
+          <ul>
+            <li 
+                >
+              <a href="javascript:;">
+                <span > </span>
+              </a>
+              <ul>
+                <li 
+                    >
+                  <a  >
+                    <span ></span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </uib-accordion-group>
+
+  </uib-accordion>
+</div>
+
+<script type="text/javascript">
+  $(function(){
+    $('#sidebar-wrap').slimScroll({
+      height: '100%'
+    });
+  });
+</script>
+
+</aside>
+        </div>
+
+        <div class="view-container" >
+            <section id="content" autoscroll="false">
+                <!-- BEGIN PAGE HEADER-->
+<div class="page">
+  <div class="pageheader">
+    <h2>Dashboard</h2>
+    <div class="page-bar">
+      <ul class="page-breadcrumb">
+        <li>
+          <a >Home</a>
+        </li>
+        <li>
+          <span ></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- END PAGE HEADER-->
+  <!---------------------------------- 4 Dashboard Part----------------------------------------------------------------->
+  <div class="row">
+
+    <!----------------------------------Current Edu Year Part----------------------------------------------------------------->
+    <div class="card-container col-lg-3 col-sm-6 col-sm-12">
+      <div class="card">
+        <div class="front bg-greensea">
+
+          <div class="row">
+            <div class="col-xs-4">
+              <i class="fa fa-globe fa-4x"></i>
+            </div>
+            <div class="col-xs-8">
+              <p class="text-elg text-strong mb-0">2568/2</p>
+              <span>ปีการศึกษา</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!----------------------------------Download Manual Part----------------------------------------------------------------->
+    <div class="card-container col-lg-3 col-sm-6 col-sm-12">
+      <div class="card">
+        <div class="front bg-lightred">
+          <a class="dashboard-stat dashboard-stat-v2 purple" href="./upload/manual_student_registration.pdf"
+             target="_blank">
+            <div class="row">
+              <div class="col-xs-4">
+                <i class="fa fa-download fa-4x"></i>
+              </div>
+              <div class="col-xs-8">
+                <p class="text-elg text-strong mb-0">คู่มือ</p>
+                <span>ลงทะเบียนออนไลน์</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!----------------------------------CPGA Part----------------------------------------------------------------->
+    <div class="card-container col-lg-3 col-sm-6 col-sm-12">
+      <div class="card">
+        <div class="front bg-slategray">
+          <div class="row">
+            <div class="col-xs-4">
+              <i class="fa fa-book fa-4x"></i>
+            </div>
+            <div class="col-xs-8">
+              <p  class="text-elg text-strong mb-0">2.92</p>
+              <span>เกรดเฉลี่ยสะสม</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!----------------------------------Student Status Part----------------------------------------------------------------->
+    <div class="card-container col-lg-3 col-sm-6 col-sm-12">
+      <div class="card">
+        <div class="front bg-blue">
+
+          <!-- row -->
+          <div class="row">
+            <!-- col -->
+            <div class="col-xs-4">
+              <i class="fa fa-user fa-4x"></i>
+            </div>
+            <!-- /col -->
+            <!-- col -->
+            <div class="col-xs-8">
+              <p class="text-elg text-strong mb-0">ปกติ</p>
+              <span>สถานะภาพ</span>
+            </div>
+            <!-- /col -->
+          </div>
+          <!-- /row -->
+
+        </div>
+      </div>
+    </div>
+    <!-- /col -->
+
+  </div>
+  <!-- BEGIN MAIN CONTENT -->
+
+  <!----------------------------------Profile & Student Black list Part----------------------------------------------------------------->
+  <div class="row">
+    <!----------------------------------Profile Part----------------------------------------------------------------->
+    <div class="col-lg-6 col-xs-12 col-sm-12">
+      <!-- BEGIN Portlet PORTLET-->
+      <div class="tile">
+        <div class="tile-header bg-primary dvd dvd-btm">
+          <h4 class="custom-font">
+            <i class="fa fa-user"></i>
+            <strong> ข้อมูลส่วนตัว</strong>
+          </h4>
+        </div>
+        <div class="tile-body">
+          <div class="row">
+            <div class="col-md-5" style="text-align: center;">
+              <ul class="list-unstyled profile-nav" style="margin-bottom: 0px;">
+                <li style="text-align: center;">
+                  <img src="https://xregis.nation.ac.th/stdphoto/6818010003" onerror="this.src='https://ui-avatars.com/api/?name=Chanathip+Pasuta&background=random'" class="img-responsive pic-bordered" alt="Profile Picture" style="width: 100%; max-width: 150px; border-radius: 4px; margin: 0 auto;">
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-7">
+              <div class="form-group">
+                รหัสนิสิต : <span class="bold">6818010003</span>
+              </div>
+              <div class="form-group">
+                ชื่อ-นามสกุล : <span class="bold">นายชนาธิป ผาสุตะ</span>
+              </div>
+
+              <div class="form-group">
+                คณะ : <span class="bold">ทันตแพทยศาสตร์</span>
+              </div>
+
+              <div class="form-group">
+                สาขา : <span class="bold">ทันตแพทยศาสตร์</span>
+              </div>
+
+              <div class="form-group">
+                รอบเรียน : <span class="bold">ปริญญาตรี (6 ปี)</span>
+              </div>
+
+              <div class="form-group">
+                หลักสูตร : <span
+                class="bold">1118010001 (101)</span>
+              </div>
+
+              <div class="form-group">
+                อาจารย์ที่ปรึกษา : <span class="bold">พ.ต.ดร.ทพ.อานันท์ จักรอิศราพ</span>
+              </div>
+
+              <div class="form-group">
+                สถานะการเรียน : <span class="bold">เรียนปกติ</span>
+              </div>
+
+              <div class="form-group">
+                สนามสอบ : <span class="bold">มหาวิทยาลัยเนชั่น (สำหรับนิสิตระดับปริญญาตรี)</span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END Portlet PORTLET-->
+    </div>
+    <!-----------------------------------Student Black list---------------------------------------------------------->
+    <div class="col-lg-6 col-xs-12 col-sm-12">
+      <div class="tile">
+        <div class="tile-header dvd dvd-btm" >
+          <h4 class="custom-font" >
+            <i class="icon-pin"></i>
+            <strong> รายการค้างชำระ</strong>
+            <span class="text-sm"> หากมีรายการค้างชำระกรุณาติดต่อ การเงิน...</span>
+          </h4>
+
+          <h1 class="custom-font" >
+            <i class="fa fa-warning"></i>
+            <strong> รายการค้างชำระ</strong>
+            <span class="text-sm"> มีรายการค้างชำระกรุณาติดต่อ การเงิน</span>
+          </h1>
+
+        </div>
+        <div class="tile-body" >
+          <div class="text-center">
+            <h4><i class="fa fa-check-square-o"></i> ไม่พบรายการค้างชำระ </h4>
+          </div>
+        </div>
+        <div class="tile-body p-0" >
+          <div class="table-scrollable table-responsive" style="min-height: 220px; max-height: 341px; overflow-y: auto;"
+               >
+            <table class="table table-hover table-striped ">
+              <thead>
+              <tr>
+                <th style="text-align: center;">รายการค้างชำระ</th>
+                <th style="text-align: center;">จำนวนเงิน</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr >
+                <td>&nbsp;</td>
+                <td style="text-align: right;">&nbsp;</td>
+              </tr>
+              </tbody>
+                </table>
+
+                    
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!---------------------------------- CGPA Chart Part----------------------------------------------------------------->
+  <div class="row">
+    <!----------------------------------Chart Part----------------------------------------------------------------->
+    <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+      <!-- BEGIN Portlet PORTLET-->
+      <div class="tile">
+        <div class="tile-header dvd dvd-btm">
+
+          <form class="form-inline" role="form">
+
+            <div class="form-group">
+              <h4 class="custom-font">
+                <i class="fa fa-line-chart"></i>
+                <strong>ผลการเรียน</strong>
+                <span class="text-sm">ผลการเรียนที่ผ่านมา...</span>
+              </h4>
+            </div>
+
+            <div class="form-group pull-right">
+              <div class="col-md-2">
+                <div class="btn-group" uib-dropdown>
+                  <button type="button" class="btn btn-cyan dropdown-toggle" uib-dropdown-toggle>
+                    ภาคเรียนที่ 1/2569 <i class="fa fa-angle-down"></i>
+                  </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li >
+                      <a href="" >Dummy Data</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </form>
+        </div>
+        <div class="tile-body" >
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+              <div id="chartGpa"
+                   
+                   >
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+              <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+                  <div class="progress-list mt-20">
+                    <div class="details">
+                      <div class="title text-lg" style="line-height: 30px">
+                        <strong>18/18</strong>
+                        <span> หน่วยกิตที่ได้</span>
+                      </div>
+                    </div>
+                    <div class="status pull-right bg-greensea">
+                      <span>100</span>%
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="progress not-rounded" style="height: 10px; margin-bottom: 10px;">
+                      <div class="progress-bar bg-greensea" role="progressbar" style="width: 100%;"></div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+              <div class="table-scrollable table-responsive" style="height: 230px; overflow-y: auto;">
+                <table class="table table-hover table-bordered table-striped">
+                  <thead>
+                  <tr>
+                    <th style="text-align: center;"> ลำดับ</th>
+                    <th style="text-align: center;"> รหัสวิชา</th>
+                    <th style="text-align: center;"> ชื่อวิชา</th>
+                    <th style="text-align: center;"> เกรด</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td style="text-align: center;"> 1</td>
+                    <td style="text-align: center;"> DNT1205</td>
+                    <td> โภชนาการอย่างยั่งยืนเพื่อสุขภาพ</td>
+                    <td style="text-align: center;">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: center;"> 2</td>
+                    <td style="text-align: center;"> DNT1401</td>
+                    <td> การพัฒนาทักษะและการเรียนรู้ตลอดชีวิต</td>
+                    <td style="text-align: center;">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: center;"> 3</td>
+                    <td style="text-align: center;"> GEE1101</td>
+                    <td> ภาษาอังกฤษเพื่อการสื่อสาร 1</td>
+                    <td style="text-align: center;">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: center;"> 4</td>
+                    <td style="text-align: center;"> GEM1116</td>
+                    <td> คอมพิวเตอร์เบื้องต้นและเทคโนโลยีสารสนเทศ</td>
+                    <td style="text-align: center;">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: center;"> 5</td>
+                    <td style="text-align: center;"> GES1106</td>
+                    <td> การคิด การสื่อสาร และการแก้ปัญหา</td>
+                    <td style="text-align: center;">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: center;"> 6</td>
+                    <td style="text-align: center;"> SCD1101</td>
+                    <td> วิทยาศาสตร์บูรณาการ 1</td>
+                    <td style="text-align: center;">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: center;"> 7</td>
+                    <td style="text-align: center;"> SCD1102</td>
+                    <td> วิทยาศาสตร์บูรณาการ 2</td>
+                    <td style="text-align: center;">&nbsp;</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- END Portlet PORTLET-->
+    </div>
+    <!----------------------------------Register Subject Part----------------------------------------------------------------->
+    <!--<div class="col-lg-6 col-xs-12 col-sm-12">
+        <div class="portlet light bordered">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="icon-share font-dark hide"></i>
+                    <span class="caption-subject font-dark bold uppercase">วิชาที่ลงทะเบียน</span>
+                </div>
+                <div class="actions">
+                    <div class="btn-group ">
+                        <button type="button"  class="btn dark btn-outline btn-circle dropdown-toggle" data-toggle="dropdown">
+                            ภาคเรียนที่ 1/2569 <i class="fa fa-angle-down"></i>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li >
+                                <a href="" >Dummy Data</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="dashboard-stat2 " style="border: solid 1px #e7ecf1;">
+                            <div class="display">
+                                <div class="number">
+                                    <h3 class="font-green-sharp">
+                                        <span data-counter="counterup" data-value="Dummy Data"></span>
+                                        <small class="font-green-sharp">/
+                                        <span data-counter="counterup" data-value="7800"></span>
+                                        </small>
+                                    </h3>
+                                    <small>หน่วยกิตที่ได้</small>
+                                </div>
+                                <div class="icon">
+                                    <i class="icon-pie-chart"></i>
+                                </div>
+                            </div>
+                            <div class="progress-info">
+                                <div class="progress">
+                                            <span style="width: 78%;" class="progress-bar progress-bar-success green-sharp">
+                                                <span class="sr-only">78% progress</span>
+                                            </span>
+                                </div>
+                                <div class="status">
+                                    <div class="status-title"> progress </div>
+                                    <div class="status-number"> 78% </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-scrollable" style="height: 230px; overflow-y: auto;">
+                    <table class="table table-hover table-striped">
+                        <thead>
+                        <tr>
+                            <th style="text-align: center;"> ลำดับ </th>
+                            <th style="text-align: center;"> รหัสวิชา </th>
+                            <th style="text-align: center;"> ชื่อวิชา </th>
+                            <th style="text-align: center;"> เกรด </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr >
+                            <td style="text-align: center;"> Dummy Data </td>
+                            <td style="text-align: center;"> Dummy Data </td>
+                            <td> Dummy Data</td>
+                            <td style="text-align: center;"> Dummy Data </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>-->
+  </div>
+
+  <!----------------------------------Exam Table Part----------------------------------------------------------------->
+<!--  <div class="row" >-->
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+      <div class="tile">
+        <div class="tile-header dvd dvd-btm">
+          <h4>
+            <i class="fa fa-table"></i>
+            <strong>ตารางสอบ</strong>
+          </h4>
+        </div>
+
+        <div class="tile-body">
+
+          <div class="row">
+            <!----------------------------------Calendar Part----------------------------------------------------------------->
+            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+
+              <div id="examCalendar" class="has-toolbar">
+              </div>
+              <!--<div class="tile ">
+                <div class="tile-body">
+                  <div id="examCalendar" class="has-toolbar">
+                  </div>
+                </div>
+              </div>-->
+            </div>
+            <!----------------------------------Table Part----------------------------------------------------------------->
+            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+              <div class="table-responsive">
+                <table class="table table-hover table-striped table-bordered">
+                  <thead>
+                  <tr>
+<!--                    <th style="text-align: center;"> ลำดับ</th>-->
+                    <th style="text-align: center;">รหัสวิชา</th>
+                    <th style="text-align: center;">ชื่อวิชา</th>
+                    <th style="text-align: center;">หน่วยกิต</th>
+                    <th style="text-align: center;">วันที่ เวลาสอบ</th>
+<!--                    <th style="text-align: center;">เวลาสอบ</th>-->
+                    <th style="text-align: center;">ศูนย์สอบ</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td style="text-align: center;">&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td style="text-align: center;">&nbsp;</td>
+                    <td style="text-align: center;">&nbsp;</td>
+                    <td style="text-align: center;">&nbsp;</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="alert alert-lightred mt-1">
+                <strong>คำเตือน</strong>
+                หากไม่พบรายวิชา วัน/เวลา/สนามสอบ ติดต่อ งานประสานนิสิต 02-123-4567
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!----------------------------------Must Have portlet-body for Calendar to render correctly -------->
+        <div class="portlet-body">
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- END MAIN CONTENT -->
+<!-- BEGIN MAIN JS & CSS -->
+<script>
+</script>
+<!-- BEGIN MAIN JS & CSS -->
+
+            </section>
+        </div>
+
+    </div>
+
+
+    <!-- Page Loader -->
+    <div id="pageloader" page-loader=""></div>
+
+    <!-- BEGIN PAGE SPINNER -->
+    <!--<div class="page-spinner-bar">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+        <div class="bounce4"></div>
+        <div class="bounce5"></div>
+    </div>-->
+    <!-- END PAGE SPINNER -->
+    <!-- BEGIN HEADER -->
+    <!--<div   class="page-header navbar navbar-fixed-top">
+    </div>-->
+    <!-- END HEADER -->
+<!--    <div class="clearfix"> </div>-->
+    <!-- BEGIN CONTAINER -->
+<!--    <div class="page-container">-->
+        <!-- BEGIN SIDEBAR -->
+<!--        <div   class="page-sidebar-wrapper"> </div>-->
+        <!-- END SIDEBAR -->
+        <!-- BEGIN CONTENT -->
+        <!--<div class="page-content-wrapper">
+            <div class="page-content">
+                &lt;!&ndash; BEGIN STYLE CUSTOMIZER(optional) &ndash;&gt;
+                &lt;!&ndash; END STYLE CUSTOMIZER &ndash;&gt;
+                &lt;!&ndash; BEGIN ACTUAL CONTENT &ndash;&gt;
+                <div ui-view class="fade-in-up"> </div>
+                &lt;!&ndash; END ACTUAL CONTENT &ndash;&gt;
+            </div>
+        </div>-->
+        <!-- END CONTENT -->
+        <!-- BEGIN QUICK SIDEBAR -->
+        <!-- END QUICK SIDEBAR -->
+<!--    </div>-->
+    <!-- END CONTAINER -->
+    <!-- BEGIN FOOTER -->
+<!--    <div   class="page-footer"> </div>-->
+    <!-- END FOOTER -->
+    <!-- BEGIN QUICK NAV -->
+    <!-- END QUICK NAV -->
+    <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+    <!-- BEGIN CORE JQUERY PLUGINS -->
+    <!--[if lt IE 9]>
+    <![endif]-->
+    <!--<script src="/assets/global/plugins/respond.min.js"></script>
+    <script src="/assets/global/plugins/excanvas.min.js"></script>-->
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+    <script src="js/jquery.slimscroll.min.js" type="text/javascript"></script>
+    <script src="js/jquery.blockui.min.js" type="text/javascript"></script>
+    <script src="js/js.cookie.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap-switch.min.js" type="text/javascript"></script>
+    <script src="js/sweetalert.min.js" type="text/javascript"></script>
+    <script src="js/jquery.validate.min.js" type="text/javascript"></script>
+    <!-- END CORE JQUERY PLUGINS -->
+
+    <script src="js/underscore-min.js" type="text/javascript"></script>
+    <script src="js/jquery.bootstrap-growl.min.js" type="text/javascript"></script>
+    <script src="js/ui-bootstrap-growl.js" type="text/javascript"></script>
+    <script src="js/ui-bootstrap-sweetalert.js" type="text/javascript"></script>
+    <script src="js/smoke.min.js" type="text/javascript"></script>
+    <script src="js/amplify.min.js" type="text/javascript"></script>
+    <script src="js/numeral.min.js" type="text/javascript"></script>
+    <script src="js/moment.min.js" type="text/javascript"></script>
+    <script src="js/th.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        moment.locale('th');
+    </script>
+    <script src="js/bootbox.min.js" type="text/javascript"></script>
+    <script src="js/aes.js" type="text/javascript"></script>
+    <script src="js/aes-ctr.js" type="text/javascript"></script>
+    <script src="js/basil.min.js" type="text/javascript"></script>
+
+    <!-- BEGIN CORE ANGULARJS PLUGINS -->
+    <script src="js/angular.min.js" type="text/javascript"></script>
+    <script src="js/angular-sanitize.min.js" type="text/javascript"></script>
+    <script src="js/angular-touch.min.js" type="text/javascript"></script>
+    <script src="js/angular-ui-router.min.js" type="text/javascript"></script>
+    <script src="js/ocLazyLoad.min.js" type="text/javascript"></script>
+    <script src="js/ui-bootstrap-tpls.min.js" type="text/javascript"></script>
+    <script src="js/angular-toastr.tpls.min.js" type="text/javascript"></script>
+    <!-- END CORE ANGULARJS PLUGINS -->
+
+    <!-- Kendo Ui -->
+    <script src="js/jszip.min.js"></script>
+    <script src="js/kendo.all.min.js"></script>
+
+    <!-- Lodash -->
+    <script src="js/async.min.js"></script>
+    <!--<script src="js/scripts/lodash/4.15.0/lodash.min.js"></script>-->
+
+    <!-- BEGIN APP LEVEL ANGULARJS SCRIPTS -->
+    <script src="js/regis-routes.js" type="text/javascript"></script>
+    <script src="js/accou-routes.js" type="text/javascript"></script>
+    <script src="js/finan-routes.js" type="text/javascript"></script>
+    <script src="js/docu_routes.js" type="text/javascript"></script>
+    <script src="js/admin-routes.js" type="text/javascript"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+    <script src="js/directives.js" type="text/javascript"></script>
+
+    <script src="js/filter.js" type="text/javascript"></script>
+    <script src="js/storeFactory.js" type="text/javascript"></script>
+    <script src="js/amplifyFactory.js" type="text/javascript"></script>
+    <script src="js/wemsFactory.js" type="text/javascript"></script>
+    <script src="js/datetime_util-0.4.js" type="text/javascript"></script>
+
+    <script src="js/wemsValidate.js"></script>
+    <script src="js/grid.js"></script>
+    <script src="js/format.js"></script>
+    <script src="js/report.js"></script>
+    <script src="js/upload.js"></script>
+    <!-- END APP LEVEL ANGULARJS SCRIPTS -->
+    <!-- BEGIN APP LEVEL JQUERY SCRIPTS -->
+    <script src="js/app.js" type="text/javascript"></script>
+    <script src="js/layout.js" type="text/javascript"></script>
+    <!-- END APP LEVEL JQUERY SCRIPTS -->
+
+    <script src="js/angular-animate.min.js" type="text/javascript"></script>
+
+    <!-- END JAVASCRIPTS -->
+
+    <!--UTILS-->
+    <script src="js/modalInstanceController.js" type="text/javascript"></script>
+
+    <!-- DIRECTIVE -->
+    <script src="js/navcollapse.js"></script>
+    <script src="js/slimscroll.js"></script>
+    <script src="js/sparkline.js"></script>
+    <script src="js/collapsesidebar.js"></script>
+    <script src="js/ripple.js"></script>
+    <script src="js/pageloader.js"></script>
+    <script src="js/daterangepicker.js"></script>
+    <script src="js/tilecontrolclose.js"></script>
+    <script src="js/tilecontroltoggle.js"></script>
+    <script src="js/tilecontrolrefresh.js"></script>
+    <script src="js/tilecontrolfullscreen.js"></script>
+    <script src="js/prettyprint.js"></script>
+    <script src="js/lazymodel.js"></script>
+    <script src="js/activatebutton.js"></script>
+    <script src="js/setnganimate.js"></script>
+    <script src="js/onblurvalidation.js"></script>
+    <script src="js/formsubmit.js"></script>
+    <script src="js/check-toggler.js"></script>
+    <script src="js/chart-morris.js"></script>
+    <script src="js/gaugechart.js"></script>
+    <script src="js/active-toggle.js"></script>
+    <script src="js/anchor-scroll.js"></script>
+    <script src="js/offcanvas-sidebar.js"></script>
+    <script src="js/submitvalidate.js"></script>
+    <script src="js/native-tab.js"></script>
+    <script src="js/tilecontrollightbox.js"></script>
+    <!-- Vanilla JS fix for sidebar toggle and submenus -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var collapseBtn = document.querySelector('a[collapse-sidebar]');
+        var offcanvasBtn = document.querySelector('.offcanvas-toggle');
+        var body = document.querySelector('body');
+        
+        // 1. Desktop sidebar shrink toggle
+        if(collapseBtn) {
+          collapseBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            body.classList.toggle('sidebar-sm');
+            body.classList.toggle('sidebar-sm-forced');
+          });
+        }
+
+        // 2. Mobile sidebar open toggle
+        if(offcanvasBtn) {
+          offcanvasBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            body.classList.toggle('sidebar-sm');
+          });
+        }
+
+        // 3. Submenu Accordion Toggle
+        var navLinks = document.querySelectorAll('#navigation > li > a');
+        navLinks.forEach(function(link) {
+          link.addEventListener('click', function(e) {
+            var parentLi = this.parentElement;
+            var subMenu = parentLi.querySelector('ul');
+            
+            if (subMenu) {
+              e.preventDefault();
+              
+              // Toggle classes for styling (arrow rotation etc.)
+              parentLi.classList.toggle('open');
+              parentLi.classList.toggle('active');
+              
+              // Toggle display of submenu
+              if (subMenu.style.display === 'block') {
+                subMenu.style.display = 'none';
+              } else {
+                // Close other open submenus (accordion effect)
+                document.querySelectorAll('#navigation > li > ul').forEach(function(ul) {
+                   ul.style.display = 'none';
+                   ul.parentElement.classList.remove('open', 'active');
+                });
+                subMenu.style.display = 'block';
+              }
+            }
+          });
+        });
+        
+        // 4. Initially hide all submenus to keep it clean
+        document.querySelectorAll('#navigation > li > ul').forEach(function(ul) {
+          ul.style.display = 'none';
+        });
+      });
+    </script>
+</body><!-- END BODY --></html>

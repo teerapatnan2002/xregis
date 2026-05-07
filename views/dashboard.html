@@ -1,0 +1,478 @@
+<!-- BEGIN PAGE HEADER-->
+<div class="page">
+  <div class="pageheader">
+    <h2>{{pageTitle}}</h2>
+    <div class="page-bar">
+      <ul class="page-breadcrumb">
+        <li>
+          <a ui-sref="dashboard">Home</a>
+        </li>
+        <li>
+          <span ng-bind="pageTitle"></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- END PAGE HEADER-->
+  <!---------------------------------- 4 Dashboard Part----------------------------------------------------------------->
+  <div class="row">
+
+    <!----------------------------------Current Edu Year Part----------------------------------------------------------------->
+    <div class="card-container col-lg-3 col-sm-6 col-sm-12">
+      <div class="card">
+        <div class="front bg-greensea">
+
+          <div class="row">
+            <div class="col-xs-4">
+              <i class="fa fa-globe fa-4x"></i>
+            </div>
+            <div class="col-xs-8">
+              <p class="text-elg text-strong mb-0">{{datSM_DATECTRL.edu_year}}/{{datSM_DATECTRL.edu_sem}}</p>
+              <span>ปีการศึกษา</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!----------------------------------Download Manual Part----------------------------------------------------------------->
+    <div class="card-container col-lg-3 col-sm-6 col-sm-12">
+      <div class="card">
+        <div class="front bg-lightred">
+          <a class="dashboard-stat dashboard-stat-v2 purple" href="./upload/manual_student_registration.pdf"
+             target="_blank">
+            <div class="row">
+              <div class="col-xs-4">
+                <i class="fa fa-download fa-4x"></i>
+              </div>
+              <div class="col-xs-8">
+                <p class="text-elg text-strong mb-0">คู่มือ</p>
+                <span>ลงทะเบียนออนไลน์</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!----------------------------------CPGA Part----------------------------------------------------------------->
+    <div class="card-container col-lg-3 col-sm-6 col-sm-12">
+      <div class="card">
+        <div class="front bg-slategray">
+          <div class="row">
+            <div class="col-xs-4">
+              <i class="fa fa-book fa-4x"></i>
+            </div>
+            <div class="col-xs-8">
+              <p  class="text-elg text-strong mb-0">{{dashboardData.cgpa}}</p>
+              <span>เกรดเฉลี่ยสะสม</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!----------------------------------Student Status Part----------------------------------------------------------------->
+    <div class="card-container col-lg-3 col-sm-6 col-sm-12">
+      <div class="card">
+        <div class="front {{datSM_STDFILE_filter.stdstatus_class}}">
+
+          <!-- row -->
+          <div class="row">
+            <!-- col -->
+            <div class="col-xs-4">
+              <i class="{{datSM_STDFILE_filter.stdstatus_icon}} fa-4x"></i>
+            </div>
+            <!-- /col -->
+            <!-- col -->
+            <div class="col-xs-8">
+              <p class="text-elg text-strong mb-0">{{datSM_STDFILE_filter.stdstatus_nameth}}</p>
+              <span>สถานะภาพ</span>
+            </div>
+            <!-- /col -->
+          </div>
+          <!-- /row -->
+
+        </div>
+      </div>
+    </div>
+    <!-- /col -->
+
+  </div>
+  <!-- BEGIN MAIN CONTENT -->
+
+  <!----------------------------------Profile & Student Black list Part----------------------------------------------------------------->
+  <div class="row">
+    <!----------------------------------Profile Part----------------------------------------------------------------->
+    <div class="col-lg-6 col-xs-12 col-sm-12">
+      <!-- BEGIN Portlet PORTLET-->
+      <div class="tile">
+        <div class="tile-header bg-primary dvd dvd-btm">
+          <h4 class="custom-font">
+            <i class="fa fa-user"></i>
+            <strong> ข้อมูลส่วนตัว</strong>
+          </h4>
+        </div>
+        <div class="tile-body">
+          <div class="row">
+            <div class="col-md-5" style="text-align: center;">
+              <ul class="list-unstyled profile-nav" style="margin-bottom: 0px;">
+                <li style="text-align: center;">
+                  <img id=profilePicture" ng-src="/stdphoto/{{settings.getUserLogin()}}"
+                       class="img-responsive pic-bordered" alt="">
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-7">
+              <div class="form-group">
+                รหัสนิสิต : <span class="bold">{{settings.getUserLogin()}}</span>
+              </div>
+              <div class="form-group">
+                ชื่อ-นามสกุล : <span class="bold">{{settings.getUserFullName()}}</span>
+              </div>
+
+              <div class="form-group">
+                คณะ : <span class="bold">{{datSM_STDFILE_filter.division_nameth}}</span>
+              </div>
+
+              <div class="form-group">
+                สาขา : <span class="bold">{{datSM_STDFILE_filter.department_nameth}}</span>
+              </div>
+
+              <div class="form-group">
+                รอบเรียน : <span class="bold">{{datSM_STDFILE_filter.zone_nameth}}</span>
+              </div>
+
+              <div class="form-group">
+                หลักสูตร : <span
+                class="bold">{{datSM_STDFILE_filter.curr_id}} ({{datSM_STDFILE_filter.stdcenter_id}})</span>
+              </div>
+
+              <div class="form-group">
+                อาจารย์ที่ปรึกษา : <span class="bold">{{SM_STD_ADVISER_filter.emp_nameth}}</span>
+              </div>
+
+              <div class="form-group">
+                สถานะการเรียน : <span class="bold">{{datSM_STDFILE_filter.lrnstatus_nameth}}</span>
+              </div>
+
+              <div class="form-group">
+                สนามสอบ : <span class="bold">{{datSM_STDFILE_filter.stdcenter_nameth}}</span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END Portlet PORTLET-->
+    </div>
+    <!-----------------------------------Student Black list---------------------------------------------------------->
+    <div class="col-lg-6 col-xs-12 col-sm-12">
+      <div class="tile">
+        <div class="tile-header dvd dvd-btm" ng-class="settings.std_blacklist_show || showOutStanding ? 'bg-danger':'bg-info' ">
+          <h4 class="custom-font" ng-hide="settings.std_blacklist_show || showOutStanding">
+            <i class="icon-pin"></i>
+            <strong> รายการค้างชำระ</strong>
+            <span class="text-sm"> หากมีรายการค้างชำระกรุณาติดต่อ การเงิน...</span>
+          </h4>
+
+          <h1 class="custom-font" ng-show="settings.std_blacklist_show || showOutStanding">
+            <i class="fa fa-warning"></i>
+            <strong> รายการค้างชำระ</strong>
+            <span class="text-sm"> มีรายการค้างชำระกรุณาติดต่อ การเงิน</span>
+          </h1>
+
+        </div>
+        <div class="tile-body" ng-hide="settings.std_blacklist_show || showOutStanding">
+          <div class="text-center">
+            <h4><i class="fa fa-check-square-o"></i> ไม่พบรายการค้างชำระ </h4>
+          </div>
+        </div>
+        <div class="tile-body p-0" ng-show="settings.std_blacklist_show || showOutStanding">
+          <div class="table-scrollable table-responsive" style="min-height: 220px; max-height: 341px; overflow-y: auto;"
+               ng-show="settings.std_blacklist_show || showOutStanding">
+            <table class="table table-hover table-striped ">
+              <thead>
+              <tr>
+                <th style="text-align: center;">รายการค้างชำระ</th>
+                <th style="text-align: center;">จำนวนเงิน</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr ng-repeat="dat in settings.std_blacklist">
+                <td>{{dat.remark}}</td>
+                <td style="text-align: right;">{{dat.amount}}</td>
+                <!--<td style="text-align: right;" ng-hide="dat.amount.indexOf(',') > -1'"> {{dat.amount | number:2}} </td>-->
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!---------------------------------- CGPA Chart Part----------------------------------------------------------------->
+  <div class="row">
+    <!----------------------------------Chart Part----------------------------------------------------------------->
+    <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+      <!-- BEGIN Portlet PORTLET-->
+      <div class="tile">
+        <div class="tile-header dvd dvd-btm">
+
+          <form class="form-inline" role="form">
+
+            <div class="form-group">
+              <h4 class="custom-font">
+                <i class="fa fa-line-chart"></i>
+                <strong>ผลการเรียน</strong>
+                <span class="text-sm">ผลการเรียนที่ผ่านมา...</span>
+              </h4>
+            </div>
+
+            <div class="form-group pull-right">
+              <div class="col-md-2">
+                <div class="btn-group" uib-dropdown>
+                  <button type="button" class="btn btn-cyan dropdown-toggle" uib-dropdown-toggle>
+                    {{selectedEduYearSem | filterEduYearSemName2}} <i class="fa fa-angle-down"></i>
+                  </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li ng-repeat="dat in SM_EDUYEAR_SEM">
+                      <a href="" ng-click="onEduYearSemChanged(dat)">{{dat | filterEduYearSemName2}}</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </form>
+        </div>
+        <div class="tile-body" >
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+              <div id="chartGpa"
+                   kendo-chart="chartGpa"
+                   k-options="gpaChartOption">
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+              <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+                  <div class="progress-list mt-20">
+                    <div class="details">
+                      <div class="title text-lg" style="line-height: 30px">
+                        <strong>{{dashboardData.cm_crd_earn}}/{{dashboardData.totalcredit}}</strong>
+                        <span> หน่วยกิตที่ได้</span>
+                      </div>
+                    </div>
+                    <div class="status pull-right bg-greensea">
+                      <span>{{dashboardData.credit_earn_percent}}</span>%
+                    </div>
+                    <div class="clearfix"></div>
+                    <uib-progressbar class="not-rounded" value="dashboardData.cm_crd_earn"
+                                     max="dashboardData.totalcredit" type="greensea">
+                    </uib-progressbar>
+                  </div>
+                </div>
+              </div>
+
+              <div class="table-scrollable table-responsive" style="height: 230px; overflow-y: auto;">
+                <table class="table table-hover table-bordered table-striped">
+                  <thead>
+                  <tr>
+                    <th style="text-align: center;"> ลำดับ</th>
+                    <th style="text-align: center;"> รหัสวิชา</th>
+                    <th style="text-align: center;"> ชื่อวิชา</th>
+                    <th style="text-align: center;"> เกรด</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr ng-repeat="dat in SM_GRDFILE">
+                    <td style="text-align: center;"> {{$index + 1}}</td>
+                    <td style="text-align: center;"> {{dat.course_no}}</td>
+                    <td> {{dat.course_title}}</td>
+                    <td style="text-align: center;"> {{dat.grade}}</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- END Portlet PORTLET-->
+    </div>
+    <!----------------------------------Register Subject Part----------------------------------------------------------------->
+    <!--<div class="col-lg-6 col-xs-12 col-sm-12">
+        <div class="portlet light bordered">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="icon-share font-dark hide"></i>
+                    <span class="caption-subject font-dark bold uppercase">วิชาที่ลงทะเบียน</span>
+                </div>
+                <div class="actions">
+                    <div class="btn-group ">
+                        <button type="button"  class="btn dark btn-outline btn-circle dropdown-toggle" data-toggle="dropdown">
+                            {{selectedEduYearSem | filterEduYearSemName2}} <i class="fa fa-angle-down"></i>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li ng-repeat="dat in SM_EDUYEAR_SEM">
+                                <a href="" ng-click="onEduYearSemChanged(dat)">{{dat | filterEduYearSemName2}}</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="dashboard-stat2 " style="border: solid 1px #e7ecf1;">
+                            <div class="display">
+                                <div class="number">
+                                    <h3 class="font-green-sharp">
+                                        <span data-counter="counterup" data-value="{{cm_crd_earn}}"></span>
+                                        <small class="font-green-sharp">/
+                                        <span data-counter="counterup" data-value="7800"></span>
+                                        </small>
+                                    </h3>
+                                    <small>หน่วยกิตที่ได้</small>
+                                </div>
+                                <div class="icon">
+                                    <i class="icon-pie-chart"></i>
+                                </div>
+                            </div>
+                            <div class="progress-info">
+                                <div class="progress">
+                                            <span style="width: 78%;" class="progress-bar progress-bar-success green-sharp">
+                                                <span class="sr-only">78% progress</span>
+                                            </span>
+                                </div>
+                                <div class="status">
+                                    <div class="status-title"> progress </div>
+                                    <div class="status-number"> 78% </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-scrollable" style="height: 230px; overflow-y: auto;">
+                    <table class="table table-hover table-striped">
+                        <thead>
+                        <tr>
+                            <th style="text-align: center;"> ลำดับ </th>
+                            <th style="text-align: center;"> รหัสวิชา </th>
+                            <th style="text-align: center;"> ชื่อวิชา </th>
+                            <th style="text-align: center;"> เกรด </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="dat in SM_GRDFILE">
+                            <td style="text-align: center;"> {{$index+1}} </td>
+                            <td style="text-align: center;"> {{dat.course_no}} </td>
+                            <td> {{dat.course_title}}</td>
+                            <td style="text-align: center;"> {{dat.grade}} </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>-->
+  </div>
+
+  <!----------------------------------Exam Table Part----------------------------------------------------------------->
+<!--  <div class="row" ng-show="showExamTable">-->
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+      <div class="tile">
+        <div class="tile-header dvd dvd-btm">
+          <h4>
+            <i class="fa fa-table"></i>
+            <strong>ตารางสอบ</strong>
+          </h4>
+        </div>
+
+        <div class="tile-body">
+
+          <div class="row">
+            <!----------------------------------Calendar Part----------------------------------------------------------------->
+            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+
+              <div id="examCalendar" class="has-toolbar">
+              </div>
+              <!--<div class="tile ">
+                <div class="tile-body">
+                  <div id="examCalendar" class="has-toolbar">
+                  </div>
+                </div>
+              </div>-->
+            </div>
+            <!----------------------------------Table Part----------------------------------------------------------------->
+            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+              <div class="table-responsive">
+                <table class="table table-hover table-striped table-bordered">
+                  <thead>
+                  <tr>
+<!--                    <th style="text-align: center;"> ลำดับ</th>-->
+                    <th style="text-align: center;">รหัสวิชา</th>
+                    <th style="text-align: center;">ชื่อวิชา</th>
+                    <th style="text-align: center;">หน่วยกิต</th>
+                    <th style="text-align: center;">วันที่ เวลาสอบ</th>
+<!--                    <th style="text-align: center;">เวลาสอบ</th>-->
+                    <th style="text-align: center;">ศูนย์สอบ</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr ng-repeat="dat in dataExamTable">
+<!--                    <td style="text-align: center;">{{$index + 1}}</td>-->
+                    <td style="text-align: center;white-space: nowrap;">
+                      {{dat.course_no}}
+                      <div ng-if="dat.canEnterExam !== null && dat.canEnterExam !== undefined">
+                        <span ng-if="dat.canEnterExam === true"
+                              class="label label-success"> มีสิทธิ์สอบ </span>
+                        <span ng-if="dat.canEnterExam === false"
+                              class="label label-danger"> ไม่มีสิทธิ์สอบ </span>
+                      </div>
+                    </td>
+                    <td>{{dat.course_nameth}}
+                      <span ng-hide="dat.edu_sem === '1' || dat.edu_sem === '3' || dat.edu_sem === '2'"
+                            class="label label-warning"> วิชาขาดสอบ </span>
+                    </td>
+                    <td style="text-align: center;">{{dat.course_credit}}</td>
+                    <td style="text-align: center;white-space: nowrap;">
+                      {{dat.fin_exam_date_str}}
+                      <br>
+                      {{dat.fin_time_fr}} - {{dat.fin_time_to}}
+                    </td>
+<!--                    <td style="text-align: center;">{{dat.fin_time_fr}} - {{dat.fin_time_to}}</td>-->
+                    <td style="text-align: center;">{{dat.stdcenter_nameth}}</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="alert alert-lightred mt-1">
+                <strong>คำเตือน</strong>
+                หากไม่พบรายวิชา วัน/เวลา/สนามสอบ ติดต่อ งานประสานนิสิต {{examContactInformation}}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!----------------------------------Must Have portlet-body for Calendar to render correctly -------->
+        <div class="portlet-body">
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- END MAIN CONTENT -->
+<!-- BEGIN MAIN JS & CSS -->
+<script>
+</script>
+<!-- BEGIN MAIN JS & CSS -->
